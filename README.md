@@ -9,8 +9,6 @@
 
 Discover plugins, connected apps, source packages, and practical use cases for OpenAI dots in ChatGPT. The full lists are included below and mirrored in the `categories/` and `use-cases/` files for easier browsing.
 
-> **Unofficial community resource.** Not affiliated with or endorsed by OpenAI.
-
 Dots are always-on agents in ChatGPT that can work toward ongoing goals, use a cloud computer, and connect to apps you choose. This repository is a curated directory and inspiration library. It links to installable items in the public plugin directory where available, to inspectable plugin packages on GitHub, and to permission-aware workflows that put them to use.
 
 ## Quick links
