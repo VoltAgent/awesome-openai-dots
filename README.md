@@ -1,73 +1,72 @@
+<div align="center">
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Last Update](https://img.shields.io/github/last-commit/VoltAgent/awesome-openai-dots?label=Last%20update&style=flat-square)](https://github.com/VoltAgent/awesome-openai-dots/commits/main)
+
+</div>
+
 # Awesome OpenAI Dots
 
-A community-curated collection of workflows, rules, plugins, integrations, and practical guides for OpenAI dots in ChatGPT.
+Discover plugins, connected apps, source packages, and practical use cases for OpenAI dots in ChatGPT.
 
-> **Unofficial community project.** Not affiliated with or endorsed by OpenAI.
+> **Unofficial community resource.** Not affiliated with or endorsed by OpenAI.
 
-Dots are always-on agents in ChatGPT that can work toward ongoing goals, use a cloud computer, and work with apps you choose to connect. This list focuses on practical ways to use and extend dots, with clear notes about permissions, approvals, and availability.
+Dots are always-on agents in ChatGPT that can work toward ongoing goals, use a cloud computer, and connect to apps you choose. This repository is a curated directory and inspiration library. It links to installable items in the public plugin directory where available, to inspectable plugin packages on GitHub, and to permission-aware workflows that put them to use.
 
-## Contents
+## Quick links
 
-- [Official OpenAI resources](#official-openai-resources)
-- [Workflow ideas](#workflow-ideas)
-- [What belongs here](#what-belongs-here)
-- [Important boundaries](#important-boundaries)
+- [ChatGPT plugin directory](https://chatgpt.com/plugins)
+- [OpenAI plugin examples on GitHub](https://github.com/openai/plugins/tree/main/plugins)
+- [Use-case library](#use-cases)
 - [Contributing](CONTRIBUTING.md)
+
+## What is listed here?
+
+- **ChatGPT directory entries** link to the app or plugin's detail page. Availability can vary by plan, region, workspace, and product surface.
+- **GitHub plugin packages** link to source folders with manifests, skills, MCP configuration, or other implementation files. They are useful to inspect and learn from; a source folder is not itself a one-click ChatGPT install link.
+- **Use cases** combine supported apps and dot capabilities into practical scenarios. They are marked proposed or tested and include their human review points.
+
+The public directory and OpenAI's GitHub examples are related parts of the plugin ecosystem, but they are not mirrors of one another. ChatGPT and Codex share a public directory on supported surfaces; individual plugins can still have surface-specific requirements. See the [official plugin documentation](https://learn.chatgpt.com/docs/plugins).
+
+## Table of Contents
+
+| ChatGPT directory | OpenAI GitHub packages | Use cases |
+|---|---|---|
+| [Developer tools](categories/developer-tools.md) | [All upstream plugin packages](categories/openai-github-plugins.md) | [Engineering & product](use-cases/engineering-and-product.md) |
+| [Productivity & communication](categories/productivity-and-communication.md) | [Inspectable source folders](https://github.com/openai/plugins/tree/main/plugins) | [Research & knowledge](use-cases/research-and-knowledge.md) |
+| [Creativity & design](categories/creativity-and-design.md) |  | [Launch & operations](use-cases/launch-and-operations.md) |
+| [Business & work](categories/business-and-work.md) |  |  |
+| [Research & data](categories/research-and-data.md) |  |  |
+| [Finance](categories/finance.md) |  |  |
+| [Health & fitness](categories/health-and-fitness.md) |  |  |
+
+## Use Cases
+
+The scenario library focuses on realistic dot workflows with named app dependencies, expected results, and human approval boundaries:
+
+- [Engineering & product](use-cases/engineering-and-product.md)
+- [Research & knowledge](use-cases/research-and-knowledge.md)
+- [Launch & operations](use-cases/launch-and-operations.md)
+
+## Curation and safety
+
+Directory links are copied from and verified against the [ChatGPT plugin directory](https://chatgpt.com/plugins). Many detail pages use opaque IDs in their URLs, so do not guess a link from an app name. GitHub links point to source folders in the [OpenAI plugins repository](https://github.com/openai/plugins).
+
+Listings and workflows are curated, not audited or endorsed by OpenAI. Plugins can request access to connected services or perform actions with external effects. Review the detail page, permissions, and source before connecting or installing anything. Use human approval for sending, publishing, merging, deploying, deleting, or changing production data.
 
 ## Official OpenAI resources
 
-### Dots: product and user guides
+- [Introducing dots](https://openai.com/index/introducing-dots/)
+- [Dots documentation](https://learn.chatgpt.com/docs/dots)
+- [Plugins documentation](https://learn.chatgpt.com/docs/plugins)
+- [Plugins in ChatGPT and Codex](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt)
+- [Importing and syncing plugin marketplaces from GitHub](https://help.openai.com/en/articles/20001504-importing-and-syncing-plugin-marketplaces-from-github)
+- [Dots privacy, security, and safety FAQs](https://help.openai.com/en/articles/20001529-dots-privacy-security-and-safety-faqs)
 
-- [Introducing dots](https://openai.com/index/introducing-dots/) — Product overview, capabilities, examples, permissions, safeguards, and rollout.
-- [Meet dots](https://learn.chatgpt.com/docs/dots) — Official ChatGPT Learn landing page for the dots documentation.
-- [Getting started with your dot](https://learn.chatgpt.com/docs/dots/getting-started) — Create a dot and start assigning it work.
-- [Message your dot](https://learn.chatgpt.com/docs/dots/channels) — Reach a dot across supported messaging channels.
-- [Tasks and memory](https://learn.chatgpt.com/docs/dots/tasks-and-memory) — Ongoing tasks, schedules, and memory.
-- [Connect computers and apps to your dot](https://learn.chatgpt.com/docs/dots/computers-and-apps) — Connected apps and computer access.
-- [Control your dot](https://learn.chatgpt.com/docs/dots/controls) — Custom Rules, approvals, and activity controls.
-- [Getting started with your dot — Help Center](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot) — Setup, plan and regional availability, tasks, memory, and controls.
-- [Dots privacy, security, and safety FAQs](https://help.openai.com/en/articles/20001529-dots-privacy-security-and-safety-faqs) — Data access, connected apps, Custom Rules, Auto-review, and safeguards.
+## Contributing
 
-### Plugins and integrations
+Suggest a new directory listing, source package, or use case with a pull request. Follow [CONTRIBUTING.md](CONTRIBUTING.md) and include verified links, availability notes, and permissions or review requirements.
 
-- [Plugins in ChatGPT](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt) — Plugins can bundle reusable skills, connected apps, and other capabilities; includes creation, sharing, and permissions.
-- [Connect and manage app accounts](https://help.openai.com/en/articles/20001494-connecting-and-managing-app-accounts-in-chatgpt) — Account setup, authorization, and disconnecting apps.
-- [Import and sync plugin marketplaces from GitHub](https://help.openai.com/en/articles/20001504-importing-and-syncing-plugin-marketplaces-from-github) — Workspace admins can import marketplaces from public or private GitHub repos. The guide documents `.agents/plugins/marketplace.json` and the daily sync behavior.
+---
 
-### Admin and safety references
-
-- [Manage dots in ChatGPT workspaces](https://help.openai.com/en/articles/20001554-manage-dots-in-chatgpt-workspaces) — Enterprise workspace controls for dots, computers, connected apps, and messaging.
-- [GPT-6 Astra System Card](https://deploymentsafety.openai.com/gpt-6-astra/evaluating-auto-review) — Model and agent safety evaluations, including dot-specific safeguards and red-team findings.
-
-## Workflow ideas
-
-These are starting points based on scenarios in OpenAI’s announcement. They are ideas to adapt and test, not prebuilt or OpenAI-approved dots.
-
-- **Engineering feedback loop:** Monitor recurring customer feedback, propose a small fix, test it, and return a pull request for review.
-- **Research watch:** Recheck selected sources on a schedule, compare new evidence with the research question, and surface changes for review.
-- **Launch coordination:** Track scope changes and prepare updated launch notes, assets, or project documents as drafts.
-- **Content production:** Turn a new interview transcript into proposed clips, show notes, and social drafts for approval.
-- **Sales proposal upkeep:** Compare new requirements with product documentation, update a draft proposal, and flag unresolved commitments.
-
-Community submissions should include the connected apps required, setup steps, expected output, and which actions are read-only, require approval, or change external data.
-
-## What belongs here
-
-- Tested dot workflows and reusable task recipes.
-- Custom Rules examples with a clear explanation of their limits.
-- Plugins and connected-app integrations that dots can use, including setup and permission requirements.
-- Guides for recurring tasks, messaging, cloud/local computer access, memory, and review.
-- Safety checklists, troubleshooting notes, and evaluations based on reproducible scenarios.
-- Specialist-dot patterns for organization workflows, where access to the relevant feature is available.
-
-## Important boundaries
-
-- **A dot is a ChatGPT product, not a downloadable agent package.** Do not claim a workflow is an installable dot unless OpenAI provides that capability and the entry has been verified.
-- **A plugin is a real extension path.** OpenAI documents plugins containing reusable skills and connected apps, and documents importing a plugin marketplace from GitHub. A dot can use supported connections within the permissions granted to its owner.
-- **Private marketplace imports are workspace-admin functionality.** Importing a marketplace does not connect users’ app accounts or grant access. Review all entries before importing; later syncs can bring in new plugins automatically.
-- **Custom Rules do not override built-in safeguards.** Clearly disclose actions that need approval and any external side effects.
-- **Availability changes.** Dots and individual capabilities are rolling out and can depend on plan, region, surface, and workspace settings. Check the linked official docs before relying on a workflow.
-
-## Source review
-
-Official links and feature notes last checked **2026-09-30**. Please open an issue or pull request when an official URL changes or a capability moves out of rollout.
+Official links and feature notes last checked **2026-09-30**. Please open an issue or pull request when a source or capability changes.
