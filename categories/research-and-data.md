@@ -1,6 +1,6 @@
 # Research & Data
 
-[← Back to main list](../README.md#table-of-contents)
+[← Back to main list](../README.md#chatgpt-plugin-directory-listings)
 
 ChatGPT plugin directory entries shown in the supplied screenshots. Check each detail page for current availability, capabilities, and required permissions.
 

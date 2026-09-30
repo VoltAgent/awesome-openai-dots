@@ -186,57 +186,162 @@ Complete inventory of plugin folders under [`openai/plugins/plugins/`](https://g
 
 ### Engineering & Product Use Cases
 
-These are **proposed** workflows, not prebuilt dots. Required plugin access and supported actions depend on the user's account, workspace, and product surface. [Open use-case file](use-cases/engineering-and-product.md).
+ [Open standalone use-case file](use-cases/engineering-and-product.md).
+These are **proposed** workflows, not prebuilt dots. Availability and actions depend on the connected apps, account, workspace, and product surface. Review every draft before it changes shared project data.
 
 #### Weekly project pulse
 
-- **Apps:** [GitHub](categories/developer-tools.md), Slack or Notion.
-- **Trigger:** Weekly schedule or an explicit request.
-- **Workflow:** Summarize recent pull requests, issue changes, decisions, and blockers; prepare a status update with links back to the source items.
-- **Human review:** Confirm the summary and any proposed issue updates before sharing or editing project records.
+- **Apps:** [GitHub](https://chatgpt.com/plugins/plugin_connector_1p_1a69035c238881919c4190932b2df699), [Slack](https://chatgpt.com/plugins/slack), and optionally [Notion](https://chatgpt.com/plugins/notion).
+- **Trigger:** A weekly schedule or an explicit request.
+- **Workflow:** Review recent pull requests, issue updates, and linked project notes; group progress, blockers, and decisions; cite the source links.
+- **Output:** A concise weekly status draft organized by project, progress, and blockers.
+- **Human review:** Verify the summary and approve it before sharing or changing issues.
 
 #### Release readiness review
 
-- **Apps:** GitHub, Vercel, and the team's project tracker.
-- **Trigger:** Release candidate or requested pre-release review.
-- **Workflow:** Compare the release checklist with open changes, required tests, deployment preview, and documentation; return a list of gaps with evidence.
-- **Human review:** A person approves merges, production deploys, and changes to production data.
+- **Apps:** [GitHub](https://chatgpt.com/plugins/plugin_connector_1p_1a69035c238881919c4190932b2df699), [Vercel](https://chatgpt.com/plugins/vercel), and the team's project tracker.
+- **Trigger:** A release candidate or a requested pre-release check.
+- **Workflow:** Compare the release checklist with open changes, required checks, preview deployment, and documentation; list gaps with evidence.
+- **Output:** A go/no-go checklist with unresolved items and links to their sources.
+- **Human review:** A person decides whether to merge, deploy to production, or change production data.
+
+#### Design-to-deployment handoff
+
+- **Apps:** [Figma](https://chatgpt.com/plugins/figma), [GitHub](https://chatgpt.com/plugins/plugin_connector_1p_1a69035c238881919c4190932b2df699), and [Vercel](https://chatgpt.com/plugins/vercel).
+- **Trigger:** A design marked ready for implementation.
+- **Workflow:** Summarize the approved design, identify the related issue or pull request, and collect the preview link and implementation notes.
+- **Output:** A handoff checklist linking the design, code change, and preview.
+- **Human review:** A designer or engineer confirms the design version and checks the preview before release.
+
+#### Customer feedback to product backlog
+
+- **Apps:** [Slack](https://chatgpt.com/plugins/slack), [Notion](https://chatgpt.com/plugins/notion), and [Linear](https://chatgpt.com/plugins/linear).
+- **Trigger:** A feedback review or a recurring weekly triage.
+- **Workflow:** Group feedback by theme, link each theme to its source, compare it with existing product notes, and draft candidate issues.
+- **Output:** A deduplicated feedback summary and proposed Linear issues.
+- **Human review:** Confirm priority, remove personal or confidential details, and approve each issue before creation.
+
+#### Database change impact review
+
+- **Apps:** [GitHub](https://chatgpt.com/plugins/plugin_connector_1p_1a69035c238881919c4190932b2df699), [Supabase](https://chatgpt.com/plugins/plugin_asdk_app_69d3e5ee6a708191baa733f7b8931995), and [Notion](https://chatgpt.com/plugins/notion).
+- **Trigger:** A database migration pull request or a requested review.
+- **Workflow:** Compare the proposed migration with the documented schema and related code; flag destructive operations, missing rollback notes, or unclear assumptions.
+- **Output:** A migration review checklist with file and documentation links.
+- **Human review:** A database owner validates the findings and approves any migration or production action.
+
+#### Project deadline check
+
+- **Apps:** [Linear](https://chatgpt.com/plugins/linear), [Google Calendar](https://chatgpt.com/plugins/google-calendar), and [Todoist](https://chatgpt.com/plugins/plugin_asdk_app_6943b73823548191a9f9216c6790c453).
+- **Trigger:** A weekly planning session or an upcoming milestone.
+- **Workflow:** Compare assigned work and due dates with calendar availability; flag conflicts and missing owners without changing schedules automatically.
+- **Output:** A short list of deadline risks and proposed next actions.
+- **Human review:** The project owner confirms priorities and approves calendar or task changes.
 
 ### Research & Knowledge Use Cases
 
-These are **proposed** workflows, not prebuilt dots. Check connector access, source quality, and workspace policy before use. [Open use-case file](use-cases/research-and-knowledge.md).
+ [Open standalone use-case file](use-cases/research-and-knowledge.md).
+These are **proposed** workflows, not prebuilt dots. Check app access, source quality, privacy, and workspace policy before use.
 
 #### Scheduled research watch
 
-- **Apps:** A supported web search or research plugin plus Google Drive or Notion.
-- **Trigger:** Weekly schedule or an explicit request.
-- **Workflow:** Revisit a defined set of sources, summarize material changes, link evidence, and flag conflicting or weak claims.
-- **Human review:** Review sources and the draft before forwarding, publishing, or making decisions from it.
+- **Apps:** [Exa](https://chatgpt.com/plugins/plugin_asdk_app_69ea4ed2cf7c8191b742ef3622479ddd), [Consensus](https://chatgpt.com/plugins/consensus), and [Google Drive](https://chatgpt.com/plugins/plugin_connector_1p_ab21a553bfbc81919ea8fd1858e3ffa7) or [Notion](https://chatgpt.com/plugins/notion).
+- **Trigger:** A weekly schedule or an explicit request.
+- **Workflow:** Revisit a user-approved source list, summarize material changes, link evidence, and flag conflicting or weak claims.
+- **Output:** A dated research digest with source links and open questions.
+- **Human review:** Check source quality and the draft before forwarding or making decisions from it.
 
 #### Meeting-to-project follow-up
 
-- **Apps:** A permitted meeting notes source, Google Drive or Notion, and optionally a project tracker.
-- **Trigger:** After a meeting transcript or notes are available.
-- **Workflow:** Extract decisions, owners, and deadlines; compare them with existing project context; prepare proposed follow-up tasks.
-- **Human review:** Confirm action items and recipients before creating tasks or sending messages.
+- **Apps:** [Plaud](https://chatgpt.com/plugins/plaud), [Google Drive](https://chatgpt.com/plugins/plugin_connector_1p_ab21a553bfbc81919ea8fd1858e3ffa7) or [Notion](https://chatgpt.com/plugins/notion), and optionally [Linear](https://chatgpt.com/plugins/linear).
+- **Trigger:** Meeting notes or a transcript become available.
+- **Workflow:** Extract decisions, owners, and deadlines; compare them with existing project context; draft follow-up tasks with links to the relevant notes.
+- **Output:** A decision log and proposed action items.
+- **Human review:** Confirm the notes, task owners, and recipients before creating tasks or sending messages.
+
+#### Citation-backed literature brief
+
+- **Apps:** [Consensus](https://chatgpt.com/plugins/consensus), [SciSpace](https://chatgpt.com/plugins/scispace), and [Zotero](https://chatgpt.com/plugins/zotero).
+- **Trigger:** A research question or a scheduled literature review.
+- **Workflow:** Find relevant studies, compare their methods and conclusions, record citations, and distinguish evidence from interpretation.
+- **Output:** A concise literature brief with linked papers, citations, and limitations.
+- **Human review:** Verify cited papers and assess whether the evidence supports the conclusions.
+
+#### Company research brief
+
+- **Apps:** [Exa](https://chatgpt.com/plugins/plugin_asdk_app_69ea4ed2cf7c8191b742ef3622479ddd), [Apollo.io](https://chatgpt.com/plugins/apollo), and optionally [HubSpot](https://chatgpt.com/plugins/hubspot).
+- **Trigger:** Preparation for a sales or partnership conversation.
+- **Workflow:** Gather public company information and approved CRM context; separate sourced facts from assumptions; identify unanswered questions.
+- **Output:** A one-page account brief with citations and suggested questions.
+- **Human review:** A person checks accuracy and policy before adding notes to the CRM or contacting anyone.
+
+#### Spreadsheet insight brief
+
+- **Apps:** [Data](https://chatgpt.com/plugins/Plugin_fc9843a6fb34819195d6c7802398a8a7), [Google Drive](https://chatgpt.com/plugins/plugin_connector_1p_ab21a553bfbc81919ea8fd1858e3ffa7), and optionally [Airtable](https://chatgpt.com/plugins/airtable).
+- **Trigger:** A new report or a recurring data review.
+- **Workflow:** Answer defined questions against approved files or tables, show the relevant period and fields, and call out missing or inconsistent data.
+- **Output:** A short findings brief with the underlying rows or source references.
+- **Human review:** Validate calculations, access permissions, and any proposed changes to shared records.
+
+#### Read-only market monitor
+
+- **Apps:** [Public Equity Investing](https://chatgpt.com/plugins/public-equity-investing), [Binance](https://chatgpt.com/plugins/binance), or another approved market-data source.
+- **Trigger:** A scheduled check or a request about a user-defined watchlist.
+- **Workflow:** Summarize observed price or market-data changes for the selected period and link to sources; do not place trades or infer suitability.
+- **Output:** A factual watchlist update with timestamps and source links.
+- **Human review:** Verify the data and make any financial decisions independently; this is not investment advice.
 
 ### Launch & Operations Use Cases
 
-These are **proposed** workflows, not prebuilt dots. Confirm the available apps and required permissions before connecting accounts. [Open use-case file](use-cases/launch-and-operations.md).
+ [Open standalone use-case file](use-cases/launch-and-operations.md).
+These are **proposed** workflows, not prebuilt dots. Confirm app availability and permissions, and require approval before external communication or publishing.
 
 #### Launch content workspace
 
-- **Apps:** Product docs in Drive or Notion and a supported design app such as Adobe or Canva.
+- **Apps:** Product docs in [Google Drive](https://chatgpt.com/plugins/plugin_connector_1p_ab21a553bfbc81919ea8fd1858e3ffa7) or [Notion](https://chatgpt.com/plugins/notion), plus [Adobe](https://chatgpt.com/plugins/adobe-photoshop) or [Canva](https://chatgpt.com/plugins/canva).
 - **Trigger:** A launch date or a request from the launch owner.
 - **Workflow:** Collect approved product facts, draft a launch brief and channel-specific copy, and prepare visual assets for review.
-- **Human review:** A person checks claims, assets, and copy before anything is published or sent externally.
+- **Output:** A launch checklist, copy drafts, and links to draft assets.
+- **Human review:** Check claims, assets, and copy before anything is published or sent externally.
 
 #### Support trend report
 
-- **Apps:** Permitted support email or team conversations and product documentation.
-- **Trigger:** Weekly schedule.
-- **Workflow:** Group recurring issues, compare them with product docs, and produce an anonymized report with links to relevant source records.
-- **Human review:** Check privacy and accuracy; draft replies remain unsent until approved.
+- **Apps:** Permitted [Slack](https://chatgpt.com/plugins/slack) or [Gmail](https://chatgpt.com/plugins/plugin_connector_1p_95d39881713c8191931482a62d6edff9) conversations and product docs in [Drive](https://chatgpt.com/plugins/plugin_connector_1p_ab21a553bfbc81919ea8fd1858e3ffa7) or [Notion](https://chatgpt.com/plugins/notion).
+- **Trigger:** A weekly schedule.
+- **Workflow:** Group recurring issues, compare them with product documentation, remove identifying details, and include links to relevant source records where policy allows.
+- **Output:** An anonymized report of common issues, emerging changes, and documentation gaps.
+- **Human review:** Check privacy and accuracy; keep draft replies unsent until approved.
+
+#### Sales account preparation
+
+- **Apps:** [Apollo.io](https://chatgpt.com/plugins/apollo), [HubSpot](https://chatgpt.com/plugins/hubspot), and [Gmail](https://chatgpt.com/plugins/plugin_connector_1p_95d39881713c8191931482a62d6edff9).
+- **Trigger:** A scheduled account review or an upcoming sales conversation.
+- **Workflow:** Combine permitted CRM notes with approved company research, highlight recent context and unanswered questions, and draft a tailored agenda or email.
+- **Output:** An account brief and unsent communication draft.
+- **Human review:** Confirm recipient, claims, and tone before updating CRM records or sending messages.
+
+#### E-commerce campaign preparation
+
+- **Apps:** [Shopify](https://chatgpt.com/plugins/shopify), [Adobe](https://chatgpt.com/plugins/adobe-photoshop) or [Canva](https://chatgpt.com/plugins/canva), and optionally [Google Drive](https://chatgpt.com/plugins/plugin_connector_1p_ab21a553bfbc81919ea8fd1858e3ffa7).
+- **Trigger:** A new product, promotion, or seasonal campaign.
+- **Workflow:** Collect approved product details, prepare draft listing copy and creative briefs, and compare required assets with the campaign checklist.
+- **Output:** Product-page copy drafts, asset checklist, and campaign readiness notes.
+- **Human review:** Verify product facts, pricing, and creative rights; a person approves edits and publication in the store.
+
+#### Inbox-to-action triage
+
+- **Apps:** [Outlook Email](https://chatgpt.com/plugins/outlook-email), [Outlook Calendar](https://chatgpt.com/plugins/outlook-calendar), and [Todoist](https://chatgpt.com/plugins/plugin_asdk_app_6943b73823548191a9f9216c6790c453).
+- **Trigger:** A daily review or an explicit request.
+- **Workflow:** Group messages by urgency and topic, identify likely tasks or meeting requests, and draft a proposed plan without replying or scheduling automatically.
+- **Output:** A prioritized inbox summary and proposed tasks or calendar slots.
+- **Human review:** Confirm task details, invitations, and all outgoing responses before they are created or sent.
+
+#### Weekly training recap
+
+- **Apps:** [COROS](https://chatgpt.com/plugins/coros) or [Fitness AI Connector](https://chatgpt.com/plugins/fitness-ai-connector).
+- **Trigger:** A weekly schedule or a request to review recent activity.
+- **Workflow:** Summarize recorded training and activity trends from the connected account; avoid diagnosing symptoms or prescribing treatment.
+- **Output:** A personal activity recap with trends and questions to discuss with a qualified professional if needed.
+- **Human review:** Check the data and sharing permissions; do not use the recap for urgent or clinical decisions.
 
 ## Curation and safety
 

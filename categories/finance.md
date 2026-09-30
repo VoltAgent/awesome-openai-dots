@@ -1,6 +1,6 @@
 # Finance
 
-[← Back to main list](../README.md#table-of-contents)
+[← Back to main list](../README.md#chatgpt-plugin-directory-listings)
 
 ChatGPT plugin directory entries shown in the supplied screenshots. Financial information is not investment advice; verify details with the provider and your own qualified sources.
 
