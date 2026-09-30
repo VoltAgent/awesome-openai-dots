@@ -28,18 +28,6 @@ Dots are always-on agents in ChatGPT that can work toward ongoing goals, use a c
 
 The public directory and OpenAI's GitHub examples are related parts of the plugin ecosystem, but they are not mirrors of one another. ChatGPT and Codex share a public directory on supported surfaces; individual plugins can still have surface-specific requirements. See the [official plugin documentation](https://learn.chatgpt.com/docs/plugins).
 
-## Table of Contents
-
-| ChatGPT directory | OpenAI GitHub packages | Use cases |
-|---|---|---|
-| [Developer tools](#developer-tools) | [All upstream plugin packages](#openai-github-plugin-packages) | [Engineering & product](#engineering--product-use-cases) |
-| [Productivity & communication](#productivity--communication) | [Inspectable source folders](https://github.com/openai/plugins/tree/main/plugins) | [Research & knowledge](#research--knowledge-use-cases) |
-| [Creativity & design](#creativity--design) |  | [Launch & operations](#launch--operations-use-cases) |
-| [Business & work](#business--work) |  |  |
-| [Research & data](#research--data) |  |  |
-| [Finance](#finance) |  |  |
-| [Health & fitness](#health--fitness) |  |  |
-
 ## ChatGPT Plugin Directory Listings
 
 ### Developer Tools

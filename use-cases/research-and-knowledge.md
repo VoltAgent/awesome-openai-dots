@@ -1,6 +1,6 @@
 # Research & Knowledge Use Cases
 
-[← Back to main list](../README.md#table-of-contents)
+[← Back to main list](../README.md#use-cases)
 
 These are **proposed** workflows, not prebuilt dots. Check connector access, source quality, and workspace policy before use.
 

@@ -1,6 +1,6 @@
 # Engineering & Product Use Cases
 
-[← Back to main list](../README.md#table-of-contents)
+[← Back to main list](../README.md#use-cases)
 
 These are **proposed** workflows, not prebuilt dots. Required plugin access and supported actions depend on the user's account, workspace, and product surface.
 
