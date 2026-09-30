@@ -1,5 +1,12 @@
 <div align="center">
 
+<a href="https://github.com/VoltAgent/awesome-openai-dots">
+<img width="1500" alt="Awesome OpenAI Dots — Plugins, Source Packages, Use Cases" src="assets/awesome-openai-dots-banner.png" />
+</a>
+
+<br/>
+<br/>
+
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Last Update](https://img.shields.io/github/last-commit/VoltAgent/awesome-openai-dots?label=Last%20update&style=flat-square)](https://github.com/VoltAgent/awesome-openai-dots/commits/main)
 
