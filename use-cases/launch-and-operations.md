@@ -51,3 +51,15 @@ These are **proposed** workflows, not prebuilt dots. Confirm app availability an
 - **Workflow:** Summarize recorded training and activity trends from the connected account; avoid diagnosing symptoms or prescribing treatment.
 - **Output:** A personal activity recap with trends and questions to discuss with a qualified professional if needed.
 - **Human review:** Check the data and sharing permissions; do not use the recap for urgent or clinical decisions.
+
+## Weekly domain health watch
+
+- **Label:** Community workflow using a third-party custom MCP app; **Proposed** (not run end to end in a dot). Disclosure: submitted by Datawright Labs, which makes the Apify tools it uses. Not an OpenAI or Apify listing.
+- **Apps:** A custom MCP app pointing at [Apify's MCP server](https://docs.apify.com/integrations/chatgpt) with the Datawright Labs DNS, SSL, WHOIS/RDAP and broken-link tools ([source and tool list](https://github.com/datawright-labs/datawright-agent-tools)). Not in the ChatGPT plugin directory.
+- **Requirements:** ChatGPT with Developer mode (custom MCP apps) and dots access; a free Apify account. Runs are billed per result on that Apify account (about $0.001 per domain checked).
+- **Setup:** Settings > Apps & Connectors (Plugins) > Create. MCP Server URL `https://mcp.apify.com?tools=datawright-labs/email-domain-dns-checker,datawright-labs/ssl-certificate-checker,datawright-labs/whois-rdap-domain-lookup,datawright-labs/broken-link-checker`, Authentication OAuth (sign in to Apify, no client ID). Tools are fixed when the app is created; re-create it to change them.
+- **Trigger:** A weekly schedule, e.g. "Every Monday, check SPF, DMARC, DKIM, SSL expiry, domain expiry and broken links for mydomain.com and tell me only if something is wrong."
+- **Workflow:** Run the read-only checks on the listed domains and site, fetch the result rows with the server's `get-dataset-items` tool, and compare with last week.
+- **Output:** A short alert listing only problems: failing email-auth records, certificates or domain registrations expiring soon, and broken links with the page they appear on.
+- **Human review:** None needed for the checks themselves (they only read public DNS, TLS, RDAP and web pages); a person decides on any DNS, certificate or site fixes.
+- **Verified:** 2026-10-24. Setup steps from Apify's ChatGPT integration docs; the MCP URL was tested to list these tools over Streamable HTTP outside ChatGPT. Not yet tested inside ChatGPT or a dot.
